@@ -1,0 +1,42 @@
+*{padding: 0;margin: 0;font-family: 'Roboto', sans-serif;box-sizing: border-box;}
+.hero{width: 100%;min-height: 100vh;background-image: linear-gradient(to right top, #caceb9, #d2d5c3, #daddcc, #e2e4d6, #eaece0, #edf0e5, #f0f4ea, #f3f8ef, #f2faf2, #f0fcf5, #effdf8, #eefffc);}
+
+/* nav sht */
+nav{background: #ffffff;width: 100%;padding: 10px 10%;display: flex;align-items: center;justify-content: space-between;position: relative;height: 8rem;}
+nav ul{width: 100%;text-align: right;}
+nav ul li{display: inline-block;list-style: none;margin: 10px 50px;}
+nav ul li a{color: #000000;text-decoration: none;font-weight: 900;font-size: 95%;}
+.logo{width: 100px;position: absolute;}
+.user-pic{width: 50px;border-radius: 50%;cursor: pointer;margin-left: 30px;}
+.sub-menu-wrap{position: absolute;top: 80%;right: 5%;width: 250px;max-height: 0px;overflow: hidden;transition: max-height 1s;}
+.sub-menu-wrap.open-menu{max-height: 400px;}
+.sub-menu {background:#fff;padding: 20px;margin: 10px;}
+.user-info{display: flex;align-items: center;}
+.user-info h3{font-weight: 700;}
+.user-info img{width: 50px;border-radius: 100%;margin-right: 15px;}
+.sub-menu hr{border: 0;height: 1px;width: 100%;background: #ccc;margin: 15px 0 10px;}
+.sub-menu-link{display: flex;align-items: center;text-decoration: none;color: #525252;margin: 10px 0;}
+.sub-menu-link p{width: 100%;font-size:x-large;font-weight:bold;}
+.sub-menu-link span{font-size: 25px;transition: transform 1s;}
+.sub-menu-link:hover span{transform: translateX(5px);}
+.sub-menu-link:hover p{font-weight: 800;}
+
+/* tablesht & contentsht*/
+#table-container {margin: 20px;text-align: center;font-size: large;}
+table {width: 100%;border-collapse: collapse;margin-top: 10px;box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);}
+table, th, td {border: 1px solid #ddd;}
+th, td {padding: 8px;text-align: left;background-color: #fff;}
+th {background-color: #fff;color: black;font-weight: bold;}
+#active-section h2,
+#deleted-section h2,
+#grand_total_table h2,
+.recap-section h2 {margin: 20px 0;padding: 10px;background-color: #ffffff00;color: black;text-align: left;}
+.flex-container {display: flex;justify-content: space-between;flex-wrap: wrap;}
+.left-div, .year-div {flex: 1;margin: 0 10px;}
+.recap-table {width: 100%;margin-bottom: 20px;}
+.note {background-color: #f8f8f8;padding: 10px;border-left: 5px solid #ccc;margin-top: 20px;}
+
+/* btnshts */
+button {background-color: #4CAF50;color: white;border: none;padding: 10px 15px;margin-right: 5px;cursor: pointer;border-radius: 4px;}
+button:hover {background-color: #45a049;}
+.locked {pointer-events: none;opacity: 0.5;}

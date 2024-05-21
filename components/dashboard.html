@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" href="../src/img/logo.png">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+<div class="hero">
+    <nav>
+        <img src="../src/img/logo.png" class="logo">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="./claims.html">Claims</a></li>
+            <li><a href="./reports.html">Reports</a></li>
+            <li><a href="./resources.html">Resources</a></li>
+            <li><a href="./admin.html">Admin</a></li>
+        </ul>
+        <img src="../src/img/profile.png" class="user-pic" onclick="toggleMenu()">
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="../src/img/profile.png">
+                    <h1>Admin</h1>
+                </div>
+                <hr>
+                <a href="./landingpage.html" class="sub-menu-link">
+                    <p>Log Out</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="table-container">
+        <h2>STATUS OF PENSION DIFFERENTIAL ARREARAGES (FY 2000-2013)</h2>
+        <br>
+        <h6 contenteditable="false" id="page-month">FY 2000-2013 Status as of February 2024</h6>
+        <br>
+        <button class="edit-button" onclick="toggleEditTitle()">Edit Month</button>
+        <button id="update-button">Export</button>
+        <button id="lock-button">Lock Table</button>
+    </div>
+        <div id="table_1">
+
+            <hr>
+            <br>
+
+            <h2>ACTIVE</h2>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Particular</th>
+                        <th colspan="2">Alpha List</th>
+                        <th colspan="2">In Payroll (A.1) <br> =B.1+C.1+D.1</th>
+                        <th colspan="2">AFPFC Paid (B.1)</th>
+                        <th colspan="2">Not Entitled (C.1)</th>
+                        <th colspan="2">Remaining Unpaid (D.1)</th>
+                    </tr>
+                    <tr>
+                        <th>Nr</th>
+                        <th>Amt</th>
+                        <th>Nr</th>
+                        <th>Amt</th>
+                        <th>Nr</th>
+                        <th>Amt</th>
+                        <th>Nr</th>
+                        <th>Amt</th>
+                        <th>Nr</th>
+                        <th>Amt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Principal</td>
+                        <td contenteditable="true" id="alpha-list-principal-nr"></td>
+                        <td contenteditable="true" id="alpha-list-principal-amt"></td>
+                        <td contenteditable="true" id="payroll-principal-nr"></td>
+                        <td contenteditable="true" id="payroll-principal-amt"></td>
+                        <td contenteditable="true" id="afpfc-paid-principal-nr"></td>
+                        <td contenteditable="true" id="afpfc-paid-principal-amt"></td>
+                        <td contenteditable="true" id="not-entitled-principal-nr"></td>
+                        <td contenteditable="true" id="not-entitled-principal-amt"></td>
+                        <td contenteditable="true" id="remaining-unpaid-principal-nr"></td>
+                        <td contenteditable="true" id="remaining-unpaid-principal-amt"></td>
+                    </tr>
+                    <tr>
+                        <td>Beneficiary</td>
+                        <td contenteditable="true" id="alpha-list-beneficiary-nr"></td>
+                        <td contenteditable="true" id="alpha-list-beneficiary-amt"></td>
+                        <td contenteditable="true" id="payroll-beneficiary-nr"></td>
+                        <td contenteditable="true" id="payroll-beneficiary-amt"></td>
+                        <td contenteditable="true" id="afpfc-paid-beneficiary-nr"></td>
+                        <td contenteditable="true" id="afpfc-paid-beneficiary-amt"></td>
+                        <td contenteditable="true" id="not-entitled-beneficiary-nr"></td>
+                        <td contenteditable="true" id="not-entitled-beneficiary-amt"></td>
+                        <td contenteditable="true" id="remaining-unpaid-beneficiary-nr"></td>
+                        <td contenteditable="true" id="remaining-unpaid-beneficiary-amt"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <td id="total-alpha-nr"></td>
+                        <td id="total-alpha-amt"></td>
+                        <td id="total-payroll-nr"></td>
+                        <td id="total-payroll-amt"></td>
+                        <td id="total-afpfc-paid-nr"></td>
+                        <td id="total-afpfc-paid-amt"></td>
+                        <td id="total-not-entitled-nr"></td>
+                        <td id="total-not-entitled-amt"></td>
+                        <td id="total-remaining-unpaid-nr"></td>
+                        <td id="total-remaining-unpaid-amt"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        
+        <br>
+        <hr>
+        <br>
+
+        <div id="table_2">
+            <h2>D E L E T ED / M O N I E S / O T P</h2>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Particular</th>
+                        <th colspan="2">Alpha List</th>
+                        <th colspan="2">Not In Payroll (A.2) <br> =B.2+C.2+D.2</th>
+                        <th colspan="2">AFPFC Paid (B.2)</th>
+                        <th colspan="2">Not Entitled (C.2)</th>
+                        <th colspan="2">Remaining Unpaid (D.2)</th>
+                    </tr>
+                    <tr>
+                        <th>Nr</th>
+                        <th>Amt</th>
+                        <th>Nr</th>
+                        <th>Amt</th>
+                        <th>Nr</th>
+                        <th>Amt</th>
+                        <th>Nr</th>
+                        <th>Amt</th>
+                        <th>Nr</th>
+                        <th>Amt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Principal</td>
+                        <td contenteditable="true" id="deleted-alpha-list-principal-nr"></td>
+                        <td contenteditable="true" id="deleted-alpha-list-principal-amt"></td>
+                        <td contenteditable="true" id="deleted-payroll-principal-nr"></td>
+                        <td contenteditable="true" id="deleted-payroll-principal-amt"></td>
+                        <td contenteditable="true" id="deleted-afpfc-paid-principal-nr"></td>
+                        <td contenteditable="true" id="deleted-afpfc-paid-principal-amt"></td>
+                        <td contenteditable="true" id="deleted-not-entitled-principal-nr"></td>
+                        <td contenteditable="true" id="deleted-not-entitled-principal-amt"></td>
+                        <td contenteditable="true" id="deleted-remaining-unpaid-principal-nr"></td>
+                        <td contenteditable="true" id="deleted-remaining-unpaid-principal-amt"></td>
+                    </tr>
+                    <tr>
+                        <td>Beneficiary</td>
+                        <td contenteditable="true" id="deleted-alpha-list-beneficiary-nr"></td>
+                        <td contenteditable="true" id="deleted-alpha-list-beneficiary-amt"></td>
+                        <td contenteditable="true" id="deleted-payroll-beneficiary-nr"></td>
+                        <td contenteditable="true" id="deleted-payroll-beneficiary-amt"></td>
+                        <td contenteditable="true" id="deleted-afpfc-paid-beneficiary-nr"></td>
+                        <td contenteditable="true" id="deleted-afpfc-paid-beneficiary-amt"></td>
+                        <td contenteditable="true" id="deleted-not-entitled-beneficiary-nr"></td>
+                        <td contenteditable="true" id="deleted-not-entitled-beneficiary-amt"></td>
+                        <td contenteditable="true" id="deleted-remaining-unpaid-beneficiary-nr"></td>
+                        <td contenteditable="true" id="deleted-remaining-unpaid-beneficiary-amt"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <td id="total-deleted-alpha-nr"></td>
+                        <td id="total-deleted-alpha-amt"></td>
+                        <td id="total-deleted-payroll-nr"></td>
+                        <td id="total-deleted-payroll-amt"></td>
+                        <td id="total-deleted-afpfc-paid-nr"></td>
+                        <td id="total-deleted-afpfc-paid-amt"></td>
+                        <td id="total-deleted-not-entitled-nr"></td>
+                        <td id="total-deleted-not-entitled-amt"></td>
+                        <td id="total-deleted-remaining-unpaid-nr"></td>
+                        <td id="total-deleted-remaining-unpaid-amt"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div id="grand_total_table">
+            <h2>Grand Totals</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Nr</th>
+                        <th>Amt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>In Payroll</td>
+                        <td id="grand-total-payroll-nr"></td>
+                        <td id="grand-total-payroll-amt"></td>
+                    </tr>
+                    <tr>
+                        <td>AFPFC Paid</td>
+                        <td id="grand-total-afpfc-paid-nr"></td>
+                        <td id="grand-total-afpfc-paid-amt"></td>
+                    </tr>
+                    <tr>
+                        <td>Not Entitled</td>
+                        <td id="grand-total-not-entitled-nr"></td>
+                        <td id="grand-total-not-entitled-amt"></td>
+                    </tr>
+                    <tr>
+                        <td>Remaining Unpaid</td>
+                        <td id="grand-total-remaining-unpaid-nr"></td>
+                        <td id="grand-total-remaining-unpaid-amt"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+        <br>
+        
+        <hr> 
+        
+        <br>
+        <!-- recap section -->
+
+        <!-- paid -->
+        <div class="flex-container">
+            <div class="left-div">
+                <h2>PAID</h2>
+                <table class="recap-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">AFPFC PAID</th>
+                            <th colspan="1">Nr of Claims</th>
+                            <th colspan="1">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>In AlphaList</td>
+                            <td contenteditable="true" id="alpha-list-recap-nr-in"></td>
+                            <td contenteditable="true" id="alpha-list-recap-amt-in"></td>
+                        </tr>
+                        <tr>
+                            <td>Not In Alphalist</td>
+                            <td contenteditable="true" id="alpha-list-recap-nr-not-in"></td>
+                            <td contenteditable="true" id="alpha-list-recap-amt-not-in"></td>   
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <td id="total-alpha-recap-nr"></td>
+                            <td id="total-alpha-recap-amt"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <table class="recap-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Nr of Claims</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>DBM Allocated Fund</td>
+                            <td contenteditable="true" id="DBM-nr-claims"></td>
+                            <td contenteditable="true" id="DBM-amt"></td>
+                        </tr>
+                        <tr>
+                            <td>AFPFC Paid</td>
+                            <td contenteditable="true" id="AFPFC-nr-claims"></td>
+                            <td contenteditable="true" id="AFPFC-amt"></td>   
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Remaining Claims/Fund</th>
+                            <td id="total-nr-claims"></td>
+                            <td id="total-amt"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+
+                <hr>
+                <br>
+                
+                <!-- unpaid table -->
+                <table class="recap-table">
+                    <h2>UNPAID</h2>
+                <table class="recap-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">AFPFC UNPAID</th>
+                            <th colspan="1">Nr of Claims</th>
+                            <th colspan="1">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Unpaid (Active D.1)</td>
+                            <td contenteditable="true" id="unpaid-active-nr"></td>
+                            <td contenteditable="true" id="unpaid-active-amt"></td>
+                        </tr>
+                        <tr>
+                            <td>(Monies/OTP D.2)</td>
+                            <td contenteditable="true" id="unpaid-monies-nr"></td>
+                            <td contenteditable="true" id="unpaid-monies-amt"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <td id="total-unpaid-nr"></td>
+                            <td id="total-unpaid-amt"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <!-- deficit -->
+                <table class="recap-table">
+                    <h2></h2>
+                <table class="recap-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="1">Est. Deficit Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="total-deficit-amt"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            
+            <br>
+
+            <div class="year-div">
+
+                <!-- year -->
+                <table class="recap-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="1">Year</th>
+                            <th colspan="1">Nr of Claims</th>
+                            <th colspan="1">Amount</th>
+                            <th colspan="1">%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td contenteditable="true" class="year"></td>
+                            <td contenteditable="true" class="nr-of-claims"></td>
+                            <td contenteditable="true" class="amount"></td>
+                            <td class="percent"></td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true" class="year"></td>
+                            <td contenteditable="true" class="nr-of-claims"></td>
+                            <td contenteditable="true" class="amount"></td>
+                            <td class="percent"></td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true" class="year"></td>
+                            <td contenteditable="true" class="nr-of-claims"></td>
+                            <td contenteditable="true" class="amount"></td>
+                            <td class="percent"></td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true" class="year"></td>
+                            <td contenteditable="true" class="nr-of-claims"></td>
+                            <td contenteditable="true" class="amount"></td>
+                            <td class="percent"></td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true" class="year"></td>
+                            <td contenteditable="true" class="nr-of-claims"></td>
+                            <td contenteditable="true" class="amount"></td>
+                            <td class="percent"></td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true" class="year"></td>
+                            <td contenteditable="true" class="nr-of-claims"></td>
+                            <td contenteditable="true" class="amount"></td>
+                            <td class="percent"></td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true" class="year"></td>
+                            <td contenteditable="true" class="nr-of-claims"></td>
+                            <td contenteditable="true" class="amount"></td>
+                            <td class="percent"></td>
+                        </tr>
+                        <tr>
+                            <td contenteditable="true" class="year"></td>
+                            <td contenteditable="true" class="nr-of-claims"></td>
+                            <td contenteditable="true" class="amount"></td>
+                            <td class="percent"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note">
+                    <h3>Note:</h3>
+                    <h5>Khaled Pogi!!!</h5>
+                    <p>1 Amount based on DBM Allocated Fund (18.9B)</p>
+                    <p>2 Variance is due to pensioners with incorrect data in PenMIS and/or no <br> Control Nrs, cannot be crossmatched at the moment</p>
+                    <p>3 Claims which were paid, but pensioners were already deleted in the 
+                        payroll</p>
+                    <p>4 One Time Payment</p>
+                    <p>5 Pensioners who were not included in the Alpha List, but are entitled <br> to differential claims</p>
+                    <p>6 Not paid due to overpayment</p>
+                    <p>Based on Feb 2024 Payroll <br>
+                        Active - in the payroll <br>
+                        Deleted - not in the payroll
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+</div>
+<script src="./js/dashboard.js"></script>
+</body>
+</html>

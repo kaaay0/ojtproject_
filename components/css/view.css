@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f0f2f5, #c2c5a7);
+    color: #333;
+}
+
+.container {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    background-color: #0b0b0b;
+    color: #ffffff;
+}
+
+.text-lg {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.table {
+    transition: all 0.3s;
+    display: block;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.table thead, .table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table th, .table td {
+    padding: 8px 15px;
+    line-height: 1.5;
+}
+
+.table th {
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.table tr:hover {
+    background-color: #f8f9fa;
+}
+
+#readOnlyTable th, 
+#readOnlyTable td {
+    text-align: center;
+}
+
+#readOnlyTable {
+    max-height: unset;
+    overflow-x: auto;
+}
+
+#readOnlyTable tbody tr:hover {
+background-color: #f0f5ff;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    background-color: #545050;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+#pagination {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 -1px 6px rgba(0,0,0,0.1);
+  }
+
+.pagination button {
+    background-color: #545050;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #ffffff;
+}
+
+.pagination button:hover {
+    background-color: #000000;
+}
+
+.pagination button.active {
+    background-color: #545050;
+    color: rgb(255, 255, 255);
+    border-color: #000000;
+}

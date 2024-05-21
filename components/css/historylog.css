@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(-45deg, #caceb9, #d2d5c3, #daddcc, #e2e4d6, #eaece0, #edf0e5, #f0f4ea, #f3f8ef, #f2faf2, #f0fcf5, #effdf8, #eefffc);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.container {
+    max-width: 800px;
+    height: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    position: relative;
+}
+
+.page-title {
+    text-align: center;
+    color: #2c3e50;
+}
+
+button {
+    background-color: #545050;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+}
+
+.log-list {
+    list-style: none;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 680px;
+}
+
+.log-entry {
+    background: #ecf0f1;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-log-entry {
+    background-color: #e74c3c;
+}
+
+.delete-log-entry:hover {
+    background-color: #c0392b;
+}
+
+.clear-history {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+.pagination {
+    padding: 5px 0;
+    text-align: center;
+    font-weight: 400;
+}
+#prevPageBtn, #nextPageBtn {
+    background-color: #353535;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}

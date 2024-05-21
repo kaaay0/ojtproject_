@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claims</title>
+    <link rel="icon" href="../src/img/logo.png">
+    <link rel="stylesheet" href="./css/claims.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="../src/img/logo.png" class="logo">
+            <ul>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="#">Claims</a></li>
+                <li><a href="./reports.html">Reports</a></li>
+                <li><a href="./resources.html">Resources</a></li>
+                <li><a href="./admin.html">Admin</a></li>
+            </ul>
+            <img src="../src/img/profile.png" class="user-pic" onclick="toggleMenu()">
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="../src/img/profile.png">
+                        <h1>Admin</h1>
+                    </div>
+                    <hr>
+                    <a href="./landingpage.html" class="sub-menu-link">
+                        <p>Log Out</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- main content -->
+        <main>
+            <!-- left column -->
+            <div class="left-column">
+                
+                <a href="./view.html" class="card-link">
+                    <div class="card info-card">
+                        <h2>Pensioners Basic Information</h2>
+                    </div>
+                </a>
+
+                <a href="./crud.html" class="card-link">
+                    <div class="card steps-card">
+                        <h2>Validation Steps</h2>
+                    </div>
+                </a>
+            </div>
+          
+
+            <div class="right-column">
+                <a href="./historylog.html" class="card-link">
+                    <div class="card history-card">
+                        <h2>History</h2>
+                    </div>
+                </a>
+            </div>
+        </main>
+    </div>
+    <script src="../components/js/claims.js"></script>
+</body>
+</html>

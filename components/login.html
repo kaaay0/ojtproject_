@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" href="../src/img/logo.png">
+
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    
+    <div class="form">
+        <img src="../src/img/logo.png" alt="PMGC Logo" class="logo">
+        <h1 class="heading">Admin</h1>
+        <input type="text" id="usernameInput" placeholder="Username" class="username" autocomplete="off" required>
+        <div class="password-wrapper">
+            <input type="password" id="passwordInput" placeholder="Password" class="password" autocomplete="off" required>
+        </div>
+        <button class="submit-btn" onclick="login()">Log in</button>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/crud.css">
+    <title>Validation Steps</title>
+    <link rel="icon" href="../src/img/logo.png">
+</head>
+<body>
+    <button onclick="goBack()" class="btn go-back">Go Back</button>  
+    <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search for names..." class="search-input">
+    <h2 class="table-title">Steps</h2>
+    <button onclick="addRow()" class="btn add-row">Add Row</button>
+    <div class="table-container">
+        <table id="dataTable" class="data-table">
+            <thead class="table-header">
+                <tr class="heading">
+                    <th class="num-header">#</th>
+                    <th class="type-header">Type</th>
+                    <th class="payroll-header">In Current Payroll?</th>
+                    <th class="prin-header">Paid Prin 00-07?</th>
+                    <th class="freq-header">Freq</th>
+                    <th class="prin-header">Paid Prin 08-13?</th>
+                    <th class="freq-header">Freq</th>
+                    <th class="prin-header">Paid Prin 08-12?</th>
+                    <th class="freq-header">Freq</th>
+                    <th class="actual-header">Actual MP (AFPCFC)</th>
+                    <th class="mp-header">MP per Factors</th>
+                    <th class="var-header">Variance</th>
+                    <th class="bene-header">% (Bene)</th>
+                    <th class="sb-header">Should Be (Bene)</th>
+                    <th class="var-header">Variance</th>
+                    <th class="pen-header">Sharing per PenMIS Historical</th>
+                    <th class="share-header">Sharing per Current Payroll</th>
+                    <th class="cdd-header">CDD Direct Pension, 36MLS (ToPAfter)</th>
+                    <th class="req-header">For Request of?</th>
+                    <th class="rem-header">Remarks</th>
+                    <th class="pr-header">PR</th>
+                    <th class="id-header">Initial Validator</th>
+                    <th class="dv-header">Date Validated</th>
+                    <th class="op-header">OP or UP Amount</th>
+                    <th class="period-header">Period 1 -- 00-07 2 -- 08-13 3 -- LSD</th>
+                    <th class="notes-header">Notes</th>
+                    <th class="da-header">Date Approved</th>
+                    <th class="fv-header">Final Validator</th>
+                    <th class="dc-header">Date Computed</th>
+                    <th class="cb-header">Computed By</th>
+                    <th class="hc-header">Hardcopy</th>
+                    <th class="co-header">CONTROL NUMBER</th>
+                    <th class="rank-header">PENSION RANK</th>
+                    <th class="ln-header">LAST NAME</th>
+                    <th class="fn-header">FIRST NAME</th>
+                    <th class="mn-header">MIDDLE NAME</th>
+                    <th class="sn-header">AFPSN</th>
+                    <th class="grade-header">GRADE</th>
+                    <th class="los-header">LOS</th>
+                    <th class="lp-header">LP</th>
+                    <th class="db-header">DATE OF BIRTH</th>
+                    <th class="entry-header">DATE ENTRY</th>
+                    <th class="ret-header">DATE RET</th>
+                    <th class="death-header">DATE OF DEATH</th>
+                    <th class="bank-header">BANK</th>
+                    <th class="ar-header">ACCOUNT NR</th>
+                    <th class="bos-header">BOS</th>
+                    <th class="retrank-header">RETRANK</th>
+                    <th class="prank-header">PAYRANK</th>
+                    <th class="sepa-header">Sepa Cause</th>
+                    <th class="claimant-header">CLAIMANT</th>
+                    <th class="cp-header">CP NR</th>
+                    <th class="action-header">ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="pagination" class="pagination">
+        <button onclick="previousPage()" class="btn pagination-btn prev-page">Previous</button>
+        <button onclick="nextPage()" class="btn pagination-btn next-page">Next</button>
+    </div>    
+    <script src='./js/crud.js'></script>
+</body>
+</html>

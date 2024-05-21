@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Admin CRUD</title>
+    <link rel="icon" href="../src/img/logo.png">
+    <link rel="stylesheet" href="../components/css/admin.css">
+    
+</head>
+<body>
+    
+    <body>
+        <div class="hero"> 
+            <nav>
+                <img src="../src/img/logo.png" class="logo">
+                <ul>
+                    <li><a href="./dashboard.html">Dashboard</a></li>
+                    <li><a href="./claims.html">Claims</a></li>
+                    <li><a href="./reports.html">Reports</a></li>
+                    <li><a href="./resources.html">Resources</a></li>
+                    <li><a href="#">Admin</a></li>
+                </ul>
+                <img src="../src/img/profile.png" class="user-pic" onclick="toggleMenu()">
+    
+                    <div class="sub-menu-wrap" id="subMenu">
+                        <div class="sub-menu">
+                            <div class="user-info">
+                                <img src="../src/img/profile.png">
+                                <h1>Admin</h1>
+                            </div>
+                            <hr>
+    
+                            <a href="../components/landingpage.html" class="sub-menu-link">
+                                <p>Log Out</p>
+                                <span>></span>
+                              </a>
+    
+                        </div>
+                    </div>
+            </nav>
+            
+
+    <div class="container">
+
+        <header>
+
+
+            <div class="filterEntries">
+                <div class="entries">
+                    Show <select name="" id="table_size">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select> entries
+                </div>
+
+                <div class="filter">
+                    <label for="search">Search:</label>
+                    <input type="search" name="" id="search" placeholder="Enter Name">
+                </div>
+            </div>
+
+            <div class="addMemberBtn">
+                <button>New member</button>
+            </div>
+
+        </header>
+
+        <div class="table">
+            <table>
+                <thead>
+                    <tr class="heading">
+                        <th>SL No</th>
+                        <th>Picture</th>
+                        <th>Full Name</th>
+                        <th>User Name</th>
+                        <th>Rank</th>
+                        <th>User Type</th>
+                        <th>Unit</th>
+                        <th>Start Date</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+
+                <tbody class="userInfo">
+                </tbody>
+            </table>
+
+
+                <footer>
+                    <span class="showEntries">Showing 1 to 10 of 50 entries</span>
+                    <div class="pagination">
+                    </div>
+                </footer>
+        </div>
+    </div>
+
+    <!--Popup Form-->
+
+    <div class="dark_bg">
+
+        <div class="popup">
+             <header>
+                <h2 class="modalTitle">Fill the Form</h2>
+                <button class="closeBtn">&times;</button>
+             </header>
+
+             <div class="body">
+                <form action="#" id="myForm">
+                    <div class="imgholder">
+                        <label for="uploadimg" class="upload">
+                            <input type="file" name="" id="uploadimg" class="picture">
+                            <i class="fa-solid fa-plus"></i>
+                        </label>
+                        <img src="../src/img/Profile Icon.webp" alt="" width="150" height="150" class="img">
+                    </div>
+
+                    <div class="inputFieldContainer">
+
+                        <div class="nameField">
+                            <div class="form_control">
+                                <label for="fName">First Name:</label>
+                                <input type="text" name="" id="fName" required>
+                        </div>
+                            <div class="form_control">
+                                <label for="mName">Middle Name:</label>
+                                <input type="text" name="" id="mName" required>
+                            </div>
+
+                            <div class="form_control">
+                                <label for="lName">Last Name:</label>
+                                <input type="text" name="" id="lName" required>
+                            </div>
+                        </div>
+
+
+                        <div class="usernameField">
+                            <div class="form_control">
+                                <label for="uName">User Name:</label>
+                                <input type="text" name="" id="uName" >
+                            </div>
+
+                        </div>
+
+                        <div class="rankField">
+                            <div class="form_control">
+                                <label for="rank">Rank:</label>
+                                <input type="text" name="" id="rank" >
+                            </div>
+                            
+                            <div class="form_control">
+                                <label for="unit">Unit:</label>
+                                <select name="unit" id="unit" >
+                                    <option value="PDSS">PDSS</option>
+                                    <option value="PDCAS">PDCAS</option>
+                                    <option value="ISU">ISU</option>
+                                    <option value="BGCU">BGCU</option>
+                                    <option value="CIU">CIU</option>
+                                    <option value="LSO">LSO</option>
+                                    <option value="PAU">PAU</option>
+                                    <option value="PG1">PG1</option>
+                                    <option value="PG3">PG3</option>
+                                    <option value="PG4">PG4</option>
+                                    <option value="PG10">PG10</option>
+                                    <option value="PBBU">PPBU</option>
+                                    <option value="RLU">RLU</option>
+
+                                </select>
+                            </div>
+
+                            <div class="form_control">
+                                <label for="userType">User Type:</label>
+                                <input type="text" name="" id="userType" >
+                            </div>
+                        </div>
+
+                        <div class="form_control">
+                            <label for="sDate">Start Date:</label>
+                            <input type="date" name="" id="sDate" >
+                        </div>
+
+                        <div class="form_control">
+                            <label for="email">Email:</label>
+                            <input type="email" name="" id="email" >
+                        </div>
+
+                        <div class="form_control">
+                            <label for="phone">Phone:</label>
+                            <input type="number" name="" id="phone" >
+                        </div>
+                    </div>
+                </form>
+             </div>
+
+             <footer class="popupFooter">
+                <button form="myForm" class="submitBtn">Submit</button>
+             </footer>
+        </div>
+
+    </div>
+
+
+    <script src="../components/js/admin.js"></script>
+</body>
+</html>

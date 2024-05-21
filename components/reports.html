@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="icon" href="../src/img/logo.png">
+    <link rel="stylesheet" href="./css/reports.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="../src/img/logo.png" class="logo">
+            <ul>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./claims.html">Claims</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="./resources.html">Resources</a></li>
+                <li><a href="./admin.html">Admin</a></li>
+            </ul>
+            <img src="../src/img/profile.png" class="user-pic" onclick="toggleMenu()">
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info" onclick="openModal()">
+                        <img src="../src/img/profile.png">
+                        <h1>Admin</h1>
+                    </div>
+                    <hr>
+                    <a href="./landingpage.html" class="sub-menu-link">
+                        <p>Log Out</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            <h1>Reports</h1>
+            <div id="dropdown-page">
+                <div class="dropdown">
+                    <button class="dropdown-btn">Statistical Reports</button>
+                    <div class="dropdown-content">
+                        <a href="#">COA Ecopy</a>
+                        <a href="#">DBM Ecopy</a>
+                        <a href="#">AFPFC Ecopy</a>
+                        <a href="#">Recap per Hardcopy</a>
+                        <a href="#">Recap per Differential Certificate</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Individual/Group report</button>
+                    <div class="dropdown-content">
+                        <a href="#">Doc Prep</a>
+                        <a href="#">Initial Validation</a>
+                        <a href="#">Encoder (MP Cert)</a>
+                        <a href="#">Checker (MP Cert)</a>
+                        <a href="#">Final Validation</a>
+                        <a href="#">Differential Computation</a>
+                        <a href="#">Scan Personnel</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Other Request</button>
+                    <div class="dropdown-content">
+                        <div class="sub-dropdown">
+                            <a class="sub-dropdown-btn">NRD, OTAG</a>
+                            <div class="sub-dropdown-content">
+                                <a href="#">Retirement/Separation Orders</a>
+                                <a href="#">Certificate</a>
+                            </div>
+                        </div>
+                        <div class="sub-dropdown">
+                            <a class="sub-dropdown-btn">AFPFC</a>
+                            <div class="sub-dropdown-content">
+                                <a href="#">36MLS Docs</a>
+                                <a href="#">B4 Certificate</a>
+                            </div>
+                        </div>
+                        <div class="sub-dropdown">
+                            <a class="sub-dropdown-btn">OT JAG</a>
+                            <div class="sub-dropdown-content">
+                                <a href="#">Declaration of Beneficiary</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Admin Edit Modal -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Admin Credentials</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <button type="button" onclick="saveCredentials()">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../components/js/reports.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="./css/resources.css">
+    <link rel="icon" href="../src/img/logo.png">
+</head>
+<div class="hero">
+    <nav>
+        <img src="../src/img/logo.png" class="logo">
+        <ul>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="./claims.html">Claims</a></li>
+            <li><a href="./reports.html">Reports</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="./admin.html">Admin</a></li>
+        </ul>
+        <img src="../src/img/profile.png" class="user-pic" onclick="toggleMenu()">
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="../src/img/profile.png">
+                    <h1>Admin</h1>
+                </div>
+                <hr>
+                <a href="./landingpage.html" class="sub-menu-link">
+                    <p>Log Out</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+<body>
+    <hr>
+    <h2>File Manager</h2>
+    <br>
+    <input type="file" id="fileInput" accept=".pdf" multiple>
+    <input type="text" id="searchBar" placeholder="Search files...">
+    <button onclick="sortFiles('name')">Name</button>
+    <button onclick="sortFiles('date')">Date</button>
+    <div id="fileArea"></div>
+    <hr>
+    <h2>Trash Bin</h2>
+    <hr>
+    <div id="trashBin"></div>
+    <div id="notificationContainer"></div>
+    <hr>
+    <script src="./js/resources.js"></script>
+</body>
+</html>

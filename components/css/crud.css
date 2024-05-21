@@ -1,0 +1,314 @@
+/* Base styles for the entire page, including the body and animations */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(-45deg, #f0f2f5, #c2c5a7);
+    background-size: 500% 600%;
+    animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation styles */
+nav { background: #4d4d4d23; width: 100%; padding: 10px 10%; display: flex; align-items: center; justify-content: space-between; position: relative; height: 8rem; }
+nav ul { width: 100%; text-align: right; }
+nav ul li { display: inline-block; list-style: none; margin: 10px 20px; }
+
+/* Button styles */
+button, .go-back, .add-row { padding: 10px 15px; border-radius: 5px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease, transform 0.3s ease; border: none; background-color: #545050; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-size: 1rem; }
+button:hover, .go-back:hover, .add-row:hover { background-color: #000000; transform: translateY(-2px); }
+
+/* Input field at search bar styling */
+input[type="text"], input[type="search"], select { padding: 10px; border-radius: 5px; border: 1px solid #ddd; box-sizing: border-box; width: 100%; transition: box-shadow 0.3s ease; }
+input:focus, select:focus { outline: none; box-shadow: 0 0 0 3px rgba(104, 112, 118, 0.5); }
+#searchInput { float: right; margin-right: 20px; margin-top: 10px; margin-bottom: -10px; width: 150px; }
+
+/* Ttable at pagination*/
+.table-container { height: 605px; overflow: auto; background-color: #ffffff7c; position: relative; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); margin-top: 5px; border: 1px solid #ccc; margin-bottom: 20px; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; color: #454546; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+.table-title { text-align: center; margin-bottom: 10px; color: #454546; }
+.data-table th, .data-table td { padding: 8px; font-size: 0.8em; }
+.table-header th { position: sticky; top: 0; z-index: 10; background-color: #babec2; }
+@media (max-width: 768px) { .table-container { overflow-y: auto; max-height: unset; } table, thead, tbody, th, td, tr { display: block; } th, td { padding: 15px; text-align: center; } }
+#pagination { display: flex; justify-content: center; align-items: center; padding: 10px 0; width: 100%; box-sizing: border-box; }
+.pagination button { padding: 5px 10px; margin: 0 5px; background-color: #545050; border: 1px solid #000000; border-radius: 5px; cursor: pointer; }
+.pagination button:hover { background-color: #000000; }
+.pagination button.active { background-color: #545050; color: rgb(255, 255, 255); }
+
+.num-header, .type-header, .payroll-header, .prin-header, .pprin-hear, .pradls-header, .freq-header, .actual-header, .mp-header, .bene-header, .sb-header, .var-header, .pen-header, .share-header, .cdd-header, .req-header, .rem-header, .pr-header, .id-header, .dv-header, .op-header, .period-header, .notes-header, .da-header, .fv-header, .dc-header, .cb-header, .hc-header, .co-header, .rank-header, .ln-header, .fn-header, .mn-header, .sn-header, .grade-header, .los-header, .lp-header, .db-header, .entry-header, .ret-header, .death-header, .bank-header, .ar-header, .bos-header, .retrank-header, .prank-header, .sepa-header, .claimant-header, .cp-header, .action-header {
+    font-size: .9em; width: specified; line-height: 1.5; padding-top: 10px; padding-bottom: 10px;}
+.cdd-header .small-text { font-size: 0.55em; display: block; }
+
+
+/* headers */
+.num-header {
+    font-size: .9em;
+    width: 30px; 
+}
+.type-header {
+    font-size: .9em;
+    width: 85px;
+}
+.payroll-header{
+    font-size: .9em;
+    width: 90px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.prin-header{
+    font-size: .9em;
+    width: 90px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.pprin-hear{
+    font-size: .9em;
+    font-size: .9em;
+    width: 90px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+} 
+.pradls-header { 
+    font-size: .9em;
+    width: 90px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.freq-header { 
+    font-size: .9em;
+    width: 70px; 
+}
+.actual-header, .mp-header { 
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.mp-header{
+    font-size: .9em;
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.bene-header{
+    font-size: .9em;
+    width: 70px;
+    line-height: 1.5; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.sb-header{
+    font-size: .9em;
+    width: 70px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.var-header { 
+    font-size: .9em;
+    width: 80px; 
+}
+.pen-header { 
+    font-size: .9em;
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.share-header {
+    font-size: .9em; 
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.cdd-header{
+    font-size: .9em;
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.cdd-header .small-text {
+    font-size: 0.55em;
+    display: block;
+}
+.req-header{
+    font-size: .9em;
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.rem-header{
+    font-size: .9em;
+    width: 100px;
+}
+.pr-header{
+    font-size: .9em;
+    width: 90px;
+}
+.id-header{
+    font-size: .9em;
+    width: 200px;
+}
+.dv-header{
+    font-size: .9em;
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.op-header{
+    font-size: .9em;
+    width: 90px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.period-header{
+    font-size: .9em;
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.notes-header{
+    font-size: .9em;
+    width: 100px;
+}
+.da-header{
+    font-size: .9em;
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.fv-header{
+    font-size: .9em;
+    width: 200px;
+}
+.dc-header{
+    font-size: .9em;
+    width: 90px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.cb-header{
+    font-size: .9em;
+    width: 200px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.hc-header{
+    font-size: .9em;
+    width: 90px;
+}
+.co-header{
+    font-size: .9em;
+    width: 150px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}
+.rank-header{
+    font-size: .9em;
+    width: 150px;
+}
+.ln-header, .fn-header, .mn-header{
+    font-size: .9em;
+    width: 200px;
+}
+.sn-header{
+    font-size: .9em;
+    width: 90px;
+}
+.grade-header{
+    font-size: .9em;
+    width: 70px;
+}
+.los-header{
+    font-size: .9em;
+    width: 70px;
+}
+.lp-header{
+    font-size: .9em;
+    width: 65px;
+}
+.db-header{
+    font-size: .9em;
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.entry-header{
+    font-size: .9em;
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ret-header{
+    font-size: .9em;
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.death-header{
+    font-size: .9em;
+    width: 100px;
+    line-height: 1.5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.bank-header{
+    font-size: .9em;
+    width: 75px;
+}
+.ar-header{
+    font-size: .9em;
+    width: 100px;
+    font-size: .9em;
+    line-height: 1.5; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.bos-header{
+    font-size: .9em;
+    width: 60px;
+}
+.retrank-header{
+    font-size: .9em;
+    width: 150px;
+}
+.prank-header{
+    font-size: .9em;
+    width: 150px;
+}
+.sepa-header{
+    font-size: .9em;
+    width: 300px;
+}
+.claimant-header{
+    font-size: .9em;
+    width: 90px;
+}
+.cp-header{
+    font-size: .9em;
+    width: 100px;
+}
+.action-header{
+    font-size: .9em;
+    width: 65px;
+}

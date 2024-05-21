@@ -1,0 +1,106 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    *:focus {
+        outline: none;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+
+    body {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(233,233,233);
+        background-image: linear-gradient(to right top, #fdfffe, #f7fbf8, #f2f7f2, #eef3ea, #ebeee3, #eaece0, #e9ebdd, #e9e9da, #eaeadb, #ebebdc, #ececdc, #ededdd);
+        background-size: cover;
+        background-position: center;
+        font-family: 'roboto', sans-serif;
+    }
+
+
+    .heading {
+        opacity: 0;
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 80px;
+        font-weight: 300;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 2;
+    }
+
+    input,
+    .submit-btn{
+        text-align: center;
+        width: calc(100% - 40px);
+        height: 35px;
+        display: block;
+        margin: 20px auto;
+        border-radius: 5px;
+        background: rgba(111, 107, 107, 0.347);
+        border: none;
+        color: #fff8f8;
+        padding: 15px;
+        transition: .5s;
+        text-transform: capitalize;
+        position: relative;
+    }
+
+    input::placeholder{
+        color: #fffefe;
+    }
+
+    input:focus,
+    .submit-btn:hover{
+        background: #0000005b;
+        color: #ffffff;
+    }
+
+    .submit-btn{
+        width: auto;
+        padding: 0 20px;
+        cursor: pointer;
+        margin: 50px auto 0;
+    }
+
+    input:focus::placeholder{
+        color: #000;
+    }
+    .password-wrapper {
+        position: relative;
+    }
+
+    .password {
+        text-align: center;
+        height: 35px;
+        border-radius: 5px;
+        background: rgba(111, 107, 107, 0.347);
+        border: none;
+        color: #520808;
+        padding: 15px;
+        transition: .5s;
+        text-transform: capitalize;
+    }
+    .logo {
+        width: 20rem;
+        height: auto;
+        display: block; 
+        margin: 0 auto;
+    }

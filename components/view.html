@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/view.css">
+    <title>Basic Information</title>
+    <link rel="icon" href="../src/img/logo.png">
+</head>
+<body>
+    <button onclick="goBack()" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+        Go Back
+    </button>  
+    <div class="container mx-auto p-4">
+        <h2 class="text-lg font-bold">Basic Information</h2>
+        <table id="readOnlyTable" class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+                <tr class="heading">
+                    <th class="#-header">#</th>
+                    <th class="rank-header">PENSION RANK</th>
+                    <th class="ln-header">LAST NAME</th>
+                    <th class="fn-header">FIRST NAME</th>
+                    <th class="mn-header">MIDDLE NAME</th>
+                    <th class="sn-header">AFPSN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Read-only rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <div id="pagination" class="pagination"></div>
+    <script src="./js/view.js"></script>
+</body>
+</html>
